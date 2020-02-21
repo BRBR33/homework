@@ -18,6 +18,18 @@ public class homework3 {
 		
 		System.out.println(String.format("거스름돈은 %d원 입니다.", change));
 		
+		int ft = change/5000;
+		int t = (change%5000)/1000;
+		int fh = (change%5000%1000)/500;
+		int h = (change%5000%1000%500)/100;
+		int fte = (change%5000%1000%500%100)/50;
+		int te = (change%5000%1000%500%100%50)/10;
+		
+		String re = String.format("오천원권 : %d장\n천원권 : %d장\n오백원짜리 동전 : %d개\n"
+				+ "백원짜리 동전 : %d개\n오십원짜리 동전 : %d개\n십원짜리 동전 : %d개", ft, t, fh, h, fte, te);
+		
+		System.out.println(re);
+		
 		
 		sc.close();
 		
